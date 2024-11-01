@@ -1,0 +1,3 @@
+<h1>Loan Payment Result</h1>
+<p>Based on an APR of <%= params[:apr].to_f.round(4) %>%, a term of <%= params[:years] %> years, and a principal of $<%= number_with_precision(params[:principal].to_f, precision: 2, delimiter: ',') %>, your monthly payment is $<%= number_with_precision(@result, precision: 2, delimiter: ',') %>.</p>
+<%= link_to "Back to Payment Calculator", "/payment/new" %>
